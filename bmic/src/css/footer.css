@@ -1,0 +1,97 @@
+
+.main-container{
+    background-color: rgb(255, 255, 255);
+}
+
+
+.limitation-gender-div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 200px;
+    
+}
+
+.limitations{
+    height: 300px;
+    width: 600px;
+    padding-right: 200px;
+
+
+}
+
+.gender{
+    background-color: snow;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 20px 20px 10px rgb(233, 244, 248);
+    border-radius: 15px;
+
+}
+
+.age-muscle-div{
+    display: flex;
+    justify-content: right;
+    margin: 70px;
+}
+
+.age{
+    background-color: snow;
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 20px 20px 10px rgb(233, 244, 248);
+    border-radius: 15px;
+    
+}
+
+.muscles{
+    background-color: snow;
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 20px 20px 10px rgb(233, 244, 248);
+    border-radius: 15px;
+    
+}
+
+.pregnancy-race-div{
+    display: flex;
+    justify-content: center;
+    padding-left: 300px;
+    margin-bottom: 50px;
+    margin-top: 0;
+    
+}
+
+.pregnancy{
+    background-color: snow;
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 20px 20px 10px rgb(233, 244, 248);
+    border-radius: 15px;
+}
+
+.race{
+    background-color: snow;
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 20px 20px 10px rgb(233, 244, 248);
+    border-radius: 15px;
+}
+
+ 
+@media only screen and (max-width: 60rem){
+    .limitations{
+        padding: 10px;
+    }
+
+    .main-container{
+        margin-top: 300px;
+        
+    }
+  
+  }  

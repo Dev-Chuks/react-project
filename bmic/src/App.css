@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+}
+
+
+.hb-div{
+  position: relative;
+  
+}
+
+.header-div{
+
+
+}
+
+.bms-div{
+  position: absolute;
+  top: 50px;
+  left: 700px;
+}
+
+
+
+@media only screen and (max-width: 60rem){
+
+  
+    /* from width of 801 and above, this media query will
+     be applied. anything below this width, this query will
+     cease to apply   */
+
+  .hb-div{
+    position: relative;
+    
+  }
+  
+  .bms-div{
+    position:absolute;
+    top: 250px;
+    left: 20px;
+    
+  }
+
+}
+
+/* 
+@media only screen and (min-width: 400px){
+
+  
+   from width of 801 and above, this media query will
+       be applied. anything below this width, this query will
+       cease to apply  
+  
+    .hb-div{
+      position: relative;
+      
+    }
+    
+    .bms-div{
+      position:absolute;
+      top: 350px;
+      left: 150px;
+      
+      
+    }
+  
+  }  */

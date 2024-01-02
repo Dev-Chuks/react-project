@@ -1,0 +1,101 @@
+
+
+.image-bmi-container{
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 80px;
+  
+    height: 500px;
+    width: 100%;
+
+}
+
+.image-container{
+    background:linear-gradient(to right, rgb(222, 236, 243),rgb(186, 229, 247));
+    width: 450px;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.bmi-result{
+    height: 350px;
+    width: 250px;
+    font-size: smaller;
+   
+}
+
+
+.bmi-result p{
+    text-align:justify;
+   
+}
+
+h2{
+    font-size: largest;
+}
+
+.healty-regular-adequate-div{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    height: 200px;
+    margin: 20px;
+    padding: 30px;
+    background-color: rgb(239, 247, 250);
+    
+}
+
+.healty-eating{
+    width:  300px;
+    height: 300px;
+    
+}
+
+.regular-excercise{
+    width: 300px;
+    height: 100px;
+}
+
+.adequate-sleep{
+    width: 300px;
+    height: 100px;
+}
+
+
+@media only screen and (max-width: 60rem){
+    /* from 960px downward, this width is applied */
+    .image-bmi-container{
+        margin-top:300px;
+    }
+
+    .image-container{
+        width: 350px;
+        height: 300px;
+    }
+
+    .healty-regular-adequate-div{
+        display:grid;
+        background-color: rgb(239, 247, 250);
+       
+        height:600px;
+    }
+
+    
+    .healty-eating{
+        width:  300px;
+        height: 50px;
+        
+    }
+
+    .regular-excercise{
+        width: 300px;
+        height: 50px;
+    }
+
+    .adequate-sleep{
+        width: 300px;
+        height: 50px;
+    }
+  
+  }  

@@ -1,0 +1,174 @@
+*{
+    font-family:sans-serif;
+}
+
+
+.form-container{
+    margin:0;
+    padding:20px;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: snow;
+    box-shadow: 10px 10px 30px rgb(120, 198, 230) ;
+}
+
+.welcome-div{
+    background-color: rgb(27, 134, 235);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin: 5px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: snow;
+}
+
+.HW-container{
+    display:flex;
+    justify-content: space-around;
+}
+
+
+input{
+    margin-top: 5px;
+}
+
+.MI-container{
+    display:flex;
+    justify-content: space-evenly;
+    margin: 10px;
+
+}
+
+
+.metric{
+    padding-right: 80px;
+}
+
+.submit-reload-div{
+    display:block;
+    width: 500px;
+    margin-bottom: 10px;
+    padding-left: 80px;
+    
+   
+}
+
+
+button{
+    width: 300px;
+    cursor: pointer;
+    height: 30px;
+    font-size: medium;
+    border:none;
+    
+}
+
+button:hover{
+    background-color: rgb(120, 198, 230) ;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+   
+
+.submit-div{
+    margin-bottom: 5px;
+   
+}
+
+
+.reload-div{
+    margin-bottom: 5px;
+}
+
+
+input{
+    padding: 8px 4px;
+    border-radius: 5px;
+
+}
+
+/* for mobile */
+
+/* for tablet */
+
+
+
+@media only screen and (max-width: 60rem){
+    
+    .form-container{
+        margin:0;
+        
+        width: 50%;
+        height: 100%;
+        border-radius: 5px;
+        background-color: snow;
+        box-shadow: 10px 10px 30px rgb(120, 198, 230) ;
+    }
+
+    
+    input{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom:4px;
+        margin-bottom:10px;
+    }
+
+    
+    .welcome-div{
+        background-color: rgb(27, 134, 235);
+        border-radius: 10px;
+        margin: 5px;
+        color: snow;
+        height:200px;
+
+    }
+    
+    .HW-container{
+        display:block;
+        
+    }
+
+    button{
+        width: 30%;
+    }
+}
+
+
+/* 
+@media only screen and (min-width: 400px){
+    .form-container{
+        margin:0;
+        
+        width: 70%;
+        height: 80%;
+        border-radius: 5px;
+        background-color: snow;
+        box-shadow: 10px 10px 30px rgb(120, 198, 230) ;
+    }
+
+    .welcome-div{
+        background-color: rgb(27, 134, 235);
+        border-radius: 10px;
+        margin: 5px;
+        color: snow;
+        height:200px;
+
+    }
+    
+    .HW-container{
+        display:block;
+        
+    }
+
+    input{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom:4px;
+        margin-bottom:10px;
+    }
+}  */

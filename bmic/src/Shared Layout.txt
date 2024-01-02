@@ -1,0 +1,155 @@
+----- SHARED LAYOUT -----
+
+THIS HELPS TO BUILD MULTI PAGE WEBSITE WITHOUT HAVING TO LOAD EACH PAGE CLICKED AND TO BE ABLE TO DO THIS OU NEED 
+THE HELP OF REACT ROUTER DOM CONTAINING SOME LIBRARIES OF WHICH browserRouter, Routes, and Route are the most used 
+perform this operation 
+
+TEH CONCEPT OF SHARED LAY9UT IS TO MAKE A PARTICULALR COMPONENT AVAILABLE IN ALL THE WEBPAGES FOR INSTANCE THE NAVBAR
+SUCH THAT WEHN YOU GET TO HOME OR ABOUT OR CONTACT US, YOU WILL SEE THE NAVBAR IN ALL OF THE PAGES. 
+
+THE LAYOUT THAT WILL BE SHARED ACROSS ALL PLATFORMS IS DESIGNED IN A FILE AND LINKED TO OTHER COMPONENT 
+
+== TEH CODE == (coding the shared layout)
+
+Import react from 'react'
+import Navbar from 'Navbar'
+import {outlet} from 'react-router-dom'
+
+const SHAREDLAYOUT = () => {
+    return(
+
+        <div>
+                // you import the component you want to be shared across all platform and call it into the return components
+                // if you eant FOOTER to be shared across all platform , then you import it and call it into the return 
+            <Navbar/>
+            <outlet/>
+        </div>
+    )
+}
+
+export default SHAREDLAYOUT
+
+
+AFTER WRITING THE CODE FOR THE SHARED LAYOUT 
+
+
+==== CODE FOR USING THE SHARED LAYOUT ====
+
+import Home from './component/Home'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import SHAREDLAYOUT from './compoenent/SHAREDLAYOUT'
+
+function App() {
+    return(
+        <div> 
+            <BrowserRouter>
+                <Routes>
+                    <Route  path = "/" element = {<SHAREDLAYOUT/>}> // thi is called the parent tag 
+
+                        <Route index element = {<Home/>}/>  // this is called the children 
+                        <Route path = 'about' element= {<About/>}/>
+                        <Route path = 'contact' element= {<Contact/>}/>
+
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </div>
+    )
+}
+
+
+
+
+the differernce between REACT-ROUTER-DOM AND SHAREDLAYOUT is that the react-router-dom provides teh libry that allows you \
+move to different pages for instance using your navigation key while shared layout allows you to use a share a compoenent on 
+multiple pages. for instance, if you want your navbar to be in all your web compoenent so that is remains static even as \
+you move from one page to another, then you can use the shared layout 
+
+
+
+
+
+
+
+
+== THE CODE FOR ROUTING FROM ONE COMPOENTENT TO ANOTHER == 
+
+
+import Home from "./components/Home"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+
+function App() {
+
+    return(
+        <div>
+
+            <BrowserRouter>
+            
+                <Routes>
+                        // the index element is the first page tht eill load as soon as the app launch  while as you navigate 
+                        // the PATH will lead you to ohter app such as home and contact. each of the nav element such as about 
+                        // and contact must have a seperate page taht was created for it with a link inside it to connect to 
+                        // this page
+                    <Route index element = {<Home/>}/>
+                    <Route path = 'about' element= {<About/>}/>
+                    <Route path = 'contact' element= {<Contact/>}/>
+                
+                </Routes>
+
+            </BrowserRouter>
+        
+        </div>
+    )
+
+}
+
+
+
+
+== CREATING THE NAVBAR ==
+
+import raect from 'react'
+import {link, Navlink} from 'react-router-dom'
+
+nb: link and navlink are the same 
+
+const Navbar = () => {
+    return (
+        
+        <nav>
+        
+            <ul>
+                <Navlink to = "/">
+
+                     <li> Home </li>
+
+                </Navlink>
+
+                <link to = "about">
+                
+                     <li> About </li>
+
+                </link>
+
+                <link to = "contact">
+                
+                     <li> Contact </li>
+
+                </link>
+
+            </ul>
+
+        </nav>
+    )
+}
+
+
+export default Navbar
+
+
+
+
+
+NORMALLY WITHOUT HTE SHARED LAYOUT , WHAT WE ALWAYS DO IS TO CREATE THE NAVBAR COMPOENENTS, IMPORT IT INTO EACH OF OUR COMPONENT AND CALL
+IT IN  THE RETURN BOX BUT WITH THE SHARED LAYOUT THERE IS NO NEED TO IMPORT OR CALL IT BUT ONCE WE CREATE THE SHARED LAYOUT COMPONENT AND
+AND LINK IT ,THATS ALL 

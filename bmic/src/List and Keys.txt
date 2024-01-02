@@ -1,0 +1,118 @@
+LIST AND KEYS 
+this allows you to create multipe stuffs using one original content. this allows you to use a compoenent over and over again 
+take for instance, you have a card and you have to replicate that card for 100 users, it would be difficult hard codiing it 
+100 times 
+
+hence the list and keys allows you to create one single card and using the list and keys , you can replicate it for different
+users using the same cintent and style of the first users
+
+the method of the key and list uses an array method 
+
+
+const sidebar = () => {
+
+    const sdbardata = {
+        {
+            key1: list1,
+            key2: list2,
+            key3: list3
+        },
+
+        {
+            id:2,
+            title: "Clients",
+            image: client,
+            cName: "sidelinks",
+            path: "/clients",
+        },
+
+        {
+            and it continues 
+        },
+    };
+
+
+    return(
+
+        <tablewrapper>
+            <table>
+                <thead>//table head. These aere rows that will contain thae header content below 
+
+                    <tr>//table row. this is the row containing the headers such as sn, date, email, chat etc
+                        
+                        <th> S/N </th>//table headers 
+                        <th> DATE </th>
+                        <th> EMAIL </th>
+                        <th> CHAT </th>
+                        <th> SMS </th>
+                        <th> TOTAL </th>
+                                        
+                   </tr>
+
+                </thead> // close of table headers 
+
+            // this will map the contents of the object sdbardata into each rows of the table 
+                {sdbardata?.map((sdbardata) => {
+                    
+                    return(
+                        <>
+                            <tr key = {sdbardata?.id}>
+                                <td> {sdbardata.id} </td>
+                                <td> {sdbardata.DATE} </td>
+                                <td> {sdbardata.EMAIL} </td>
+                                <td> {sdbardata.CHAT} </td>
+                                <td> {sdbardata.SMS} </td>
+                                <td> {sdbardata.TOTAL} </td>
+                            
+                            
+                            </tr>
+                        
+                        
+                        </>
+                    )
+
+                })}
+            
+            </table>
+        
+        </tablewrapper>
+    )
+
+
+
+
+NB: Each <tr></tr> symbolize one row which is populated by data with the <th> </th> tah while in the data section , the 
+the <tr> </tr> creates the row wjhile the <td> </td> creates the cells thta populates the data inside hte <td> tag
+<td> means table data and creates cells inside the rows of the table and populate it with the data insdie the tag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+ASSIGNMENT 
+1. CONTSTRUCT A TABLE AND PERFECT THE ART OF CODING IT TO PERFECT THE USE OF USING LIST, KEYS AND MAPPING 
+
+SOLUTION: BUILDING A TABLE USNG REACT 
+
+
+
+the wisdom behind this is that say you have a list to populate in a table , you will need to write serferal codes to individually map the 
+data in the table but with the help of LIST AND KEYS ,all you need to do is to create a list of teh data in an array using an OBJECT
+
+an OBJECT IS A VARIABLE HTAT CAN CONTAIN MULTIPLE DATA AND IT MAKES USE OF AN ARRAY TO DO THIS WHICH USES A METHOD OF key and content 
+
+after creating the list and key, we can then use MAPPING to map or link all the data content in the table saving us great stress of hours of 
+coding  

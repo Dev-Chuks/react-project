@@ -1,0 +1,113 @@
+== THE CODE ==
+
+improt react from 'react'
+
+function App(){  //NB: Remember userState only works in a function 
+
+// setting the default state of the app
+const [weight,setWeight] = useState(0)
+const [height,setHeight] = useState(0)
+const [bmi,setBmi] = useState('')
+const [message,setMessage] = useState('')
+
+
+// the function to calculate the bmi
+let calcBmi = (event) =>{
+
+// this prevents teh default value from being submitted
+    event.preventDefault()
+
+    if (weight ===0 || height === 0) {
+        alert('Please enter a valid weight and height')
+    }
+
+    else {
+        let bmi = (weight/(height*height)*703)
+
+        setBmi(bmi.tofixed(1))
+
+
+        if (bmi<25){
+            setMessage('You are underweight)
+        }
+        elseif (bmi>=25 && bmi < 30) {
+            setMessage('You are healthy')
+        }
+        else{
+            setMessage('You are overweight)
+        }
+    }
+}
+
+
+// the function thta reloads the app once clicked
+
+let reload = () =>{
+    window.location.reload()
+}
+
+    return(
+        <div classname= "app">
+            <div classname= "container">
+                <h2 classname= "center"> BMI CALCULATOR  </h2>
+                <form  onSubmit = {calcBmi}>
+                    <div>
+                        <label> Weight (lbs) </label>
+
+                        // teh onChange command senses the text in the input, once the text changes it passes the value
+                        // of the event that took place through the setWeight function 
+                        
+                        // so what this below does is that once the value of the weight changes , on clicking the submit button 
+                        // teh default value in the screen becomes teh new values inputed. this can only be wiped off if the reload 
+                        // button is clicked
+                        <input value = {weigth} onChange = {(event) => setWeight(event.target.value)}/>
+                                    
+                    </div>
+
+                    <div>
+                        <label> Height (inch) </label>
+                        <input value = {height} onChange = {(e) => setHeight(e.target.value)}/>
+                                    
+                    </div>
+
+                    <div>
+                        <button classname= 'btn' type= 'submit' > Submit </button>
+                        <button classname= 'btn btn-outline' type= 'submit' onClick = {reload}> Reload </button>
+                                    
+                    </div>
+            
+                </form>
+
+                <div classname= 'center'>
+                    // WITH this you can write a variable text and a variable paragraph using the {bmi} and {message} variables
+
+                    <h3> your BMI is: {bmi} </h3> 
+                    <p>{message}</p>
+                </div>
+
+                <div classname= 'img-container'>
+                   <img src= {imgSrc} alt = ''></img>
+                </div>
+
+
+             </div>
+        
+        </div>
+    )
+}
+
+export default App;
+
+
+
+IMPORTANT NOTE:
+
+EVERY BUTTON THAT IS CLICKED , SUBMITTED, OR INPUT BOX THAT RECEIVES A TEXT OR RELOAD BUTTON MUST HAVE A FUNCTION CREATED TO DICTATE 
+WHAT IT SHOULD DO ELSE IT WONT BE ACTIVE. HENCE, IF YOU WANT ANY ACTION OF YOURS TO DO SOMETHING IN AN APP, YOUI MUST CREATE A 
+FUNCTION  TO DIRECT IT WHAT TO DO WHILE USING THE onClick, onSubmit, onChange command TO LINK IT TO THE FUNCTION 
+
+
+SPECIAL COMMANDS
+== OnClick
+== onSubmit
+== onChange

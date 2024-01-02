@@ -1,0 +1,93 @@
+====  USE STATE  ====
+
+Use state is a component in the react libry use to change the current state of a component or update it 
+lets take a look at the code below
+
+
+== CODE ==
+import {usestate} from 'react'
+
+const Home = () => {
+
+     // this is teh default setting that is once you open the app, this is what appears "mario is 25 years old"
+     // but on clicking the button 'Click me', the OnClick event recorded in the handleclick function is performed 
+     // which sets the name and age to "luigi is 30 years old"
+
+     const [name, setName] = useState('mario');  
+     const [age, setAge] = useState('25');
+
+// the function 'handleClick' that performs the function of changing the state of the {name} and {age} once clicked
+// thereby updating it
+    const handleClick = () =>{
+        setName('luigi');
+        setAge(30)
+    }
+
+    return(
+        <div>
+        
+            <h2>Homepage</h2>
+
+            <p> 
+                {name} is {age} years old
+            </p>
+
+            <button OnClick = {handleClick}> Click me </button>
+        </div>
+    )
+}
+
+export default Home
+
+
+
+FROM THE ABOVE EXAMPLE, TEH DEFAULT STYLE IS KEPT IN THE INITIAL DECLARATION OF THE USERSTATE BUT ONCE AN ACTION IS PERFORMED 
+WHETHER IT IS CLICKING A BUTTON, HOVERING A MOUSE POINTER, SCROLLING ETC, A FUNCTION MUST BE CREATED TO UPDATE TEH STATE OF HE 
+SITE DEPENDING ON WHAT YOU WANT TO BE SONE 
+
+NB: TO USE usestate hooks , YOU MUST IMPLEMENT IT IN A FUNCTION . HENCE THE ABOVE CODE IS EXPORTED AND IMPORTED IN A FUNCION WHERE 
+THIS CODD IS RUN . YOU CANT PUT HOOKS IN conditionals, loops , class BUT THEY MUST FIRST BE DEFINED AT TEH TOP LEVELS AND THYE 
+WILL RUN CHRONOLOGICALLY
+
+
+
+
+== ANOTHER CODE ==
+
+import react, {useState} from 'react'
+
+function App () {
+
+    // setting our default
+
+    // NB: the order in ths is arranged is const [variablename, function] eg const [count,setCount]
+    // hence the setCount is a function that collects the variabl name and performs a fuction with it 
+    const [count,setCount] = useState(4)
+    const [theme,setTheme] = useState('red')
+
+    function decrement(){
+        setCount(count-1)
+        setTheme('blue')
+    }
+
+    function increment(){
+        setCount(count+1)
+        
+    }
+
+    return(
+
+        <>
+
+        // teh OnClick command senses teh action performed on the button and performs the function of the decrement or increment
+
+            <button OnClick={decrement}>-</button> 
+            <span>{count}</span>
+             <span>{theme}</span>
+            <button OnClick={increment}>-</button>
+        
+        </>
+    )
+}
+
+export default App;
