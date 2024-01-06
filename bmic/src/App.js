@@ -21,7 +21,7 @@ function App() {
      </div> 
       
       <SECTION/>
-      {/* without callng this here, the program will contained in the footer components will not run */}
+      {/* without callng thRs here, the program will contained in the footer components will not run */}
       <FOOTER/> 
     </div>
   );
