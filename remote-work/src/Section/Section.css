@@ -1,0 +1,52 @@
+.mainAndImage{
+  display: flex;
+  justify-content: center;
+   
+}
+
+.image-section{
+  
+   
+}
+
+.main-section{
+  width: 80%;
+  padding-left: 90px;
+}
+
+img{
+    width:500px;
+    padding-right: 50px;
+    
+}
+
+.main-section h1{
+    font-size: 70px;
+    width: 500px;
+    
+}
+
+.main-section p{
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+.main-section button{
+    background-color: black;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 10px;
+    margin:0;
+    margin-bottom:125px
+}
+
+.Four-images{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.Four-images img{
+    width: 80px;
+}

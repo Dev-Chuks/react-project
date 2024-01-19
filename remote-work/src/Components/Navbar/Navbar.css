@@ -1,0 +1,54 @@
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    
+}
+
+.nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    padding-left: 100px;
+    
+}
+
+li{
+    list-style: none;
+    padding:0 40px;
+    position: relative;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+button{
+    margin: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.login{
+    margin-left: 500px;
+  
+}
+
+.login button{
+    padding: 5px 15px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 50px;
+}
